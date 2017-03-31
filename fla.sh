@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Paper-light flashcards in under 65 lines of bash
+#Paper-light flashcards in under 75 lines of bash
 #Original version coded by Joliv
 #Forked version coded by SSH[ghost]
 
@@ -11,6 +11,17 @@ if [[ ! -d Flashcards ]]; then
 	mkdir Flashcards
 fi
 cd $DIR
+
+if [[ -z $2 ]]; then
+	CMD=`basename $0`
+	echo "Usage:"
+	echo "  $CMD w(rite) <file...>"
+	echo "  $CMD t(est)  <file...>"
+	echo "  $CMD e(rase) <file...>"
+	echo
+	echo "Make sure an argument and a flashcard name are entered"
+	exit 1
+fi
 
 case "$1" in
 	[wW] | [wW]rite)
@@ -55,7 +66,6 @@ case "$1" in
 	*)
 		CMD=`basename $0`
 		echo "Usage:"
-		echo "  $CMD"
 		echo "  $CMD w(rite) <file...>"
 		echo "  $CMD t(est)  <file...>"
 		echo "  $CMD e(rase) <file...>" ;;

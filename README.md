@@ -1,6 +1,6 @@
 ### fla.sh
 
-##### Paper-light flashcards in under 65 lines of bash.
+##### Paper-light flashcards in under 75 lines of bash.
 
 Flashcards by Joliv were [simply files](http://en.wikipedia.org/wiki/Everything_is_a_file)
 with their filename as the prompt and their contents as the answer. When cards are learned, they are hidden and a `.` is prepended to the filename.
@@ -35,7 +35,6 @@ of text.
 
 ```
 Usage:
-  fla.sh
   fla.sh w(rite) <file...>
   fla.sh t(est)  <file...>
   fla.sh e(rase) <file...>
