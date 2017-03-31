@@ -1,4 +1,4 @@
-### fla.sh
+### Fla.sh
 
 ##### Paper-light flashcards in under 75 lines of bash.
 
@@ -21,6 +21,15 @@ Flashcard questions can be created anew, amended to an already existing flashcar
 be erased one at a time. Erasing a question shifts any question with a number greater than
 the deleted question down by one so no numeric gaps are present.
 
+(I have no demo gifs prepared at this time.)
+
+```
+Usage:
+  Fla.sh w(rite) <file...>
+  Fla.sh t(est)  <file...>
+  Fla.sh e(rase) <file...>
+```
+
 ### ORIGINAL COMMENT
 *How come you have the user check their answers? Wouldn't it just be a simple equality
 check?*
@@ -29,20 +38,8 @@ Ah, glad you asked! I've tried many flashcard systems, and automatic answer chec
 adds too many hassles. Some answers are cumbersome to type out, silly typos will get
 reported as wrong answers, and some questions can't simply be answered in a short string
 of text.
-###END ORIGINAL COMMENT
 
-(I have no demo gifs prepared at this time.)
-
-```
-Usage:
-  fla.sh w(rite) <file...>
-  fla.sh t(est)  <file...>
-  fla.sh e(rase) <file...>
-```
-
-### ORIGINAL COMMENT
 This script depends on GNU `shuf`, which comes bundled on any sane Linux distro, but not
 on OSX. You can install it through [Homebrew](http://brew.sh) with `brew install coreutil
 `, but then `shuf` will be installed as `gshuf`, so you'll need to either alias it (
 alias shuf='gshuf'`) or edit the script locally to change the `shuf` call to `gshuf`.
-###END ORIGINAL COMMENT
